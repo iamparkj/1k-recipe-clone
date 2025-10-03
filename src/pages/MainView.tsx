@@ -32,7 +32,7 @@ const MainView = () => {
     };
 
     fetchData();
-  });
+  }, [page]);
 
   const totalCards = res?.total ?? 0;
   const numPages =

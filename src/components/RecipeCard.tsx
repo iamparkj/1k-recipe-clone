@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import type { SinglePreview } from './types';
+import type { SinglePreview } from '../types';
 
 const RecipeCard = (
   { id, name, difficulty, tags, image }: SinglePreview

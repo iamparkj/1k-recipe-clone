@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import RecipeInfo from "./RecipeInfo";
-import RecipeIngredients from "./RecipeIngredients";
-import RecipeInstructions from "./RecipeInstructions";
-import RecipeOverview from "./RecipeOverview";
-import type { SingleRecipe } from "./types";
+import RecipeInfo from "../components/RecipeInfo";
+import RecipeIngredients from "../components/RecipeIngredients";
+import RecipeInstructions from "../components/RecipeInstructions";
+import RecipeOverview from "../components/RecipeOverview";
+import type { SingleRecipe } from "../types";
 
 async function getRecipe(id: number): Promise<SingleRecipe> {
   const url = `https://dummyjson.com/recipes/${id}`;

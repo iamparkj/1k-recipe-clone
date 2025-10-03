@@ -1,17 +1,20 @@
+import { Link } from 'react-router-dom';
 import type { SinglePreview } from './types';
 
 const RecipeCard = (
   { id, name, difficulty, tags, image }: SinglePreview
 ) => {
   return (
-    <div className="max-w-sm bg-white rounded-2xl">
-      <a href="#">
+    <div key={`card-${id}`} className="max-w-sm bg-white rounded-2xl">
+      <Link to={`recipe/${id}`}>
         <img className="aspect-2/1 w-full rounded-t-2xl object-cover" src={image} alt="" />
-      </a>
+      </Link>
       <div className="px-4 pt-4 pb-2 flex place-content-between items-center">
-        <span className="mb-2 text-xl font-semibold tracking-tight text-gray-900">
-          {name}
-        </span>
+        <Link to={`recipe/${id}`}>
+          <span className="mb-2 text-xl font-semibold tracking-tight text-gray-900">
+            {name}
+          </span>
+        </Link>
         <span className="text-sm text-[#3478f6]">
           {difficulty}
         </span>

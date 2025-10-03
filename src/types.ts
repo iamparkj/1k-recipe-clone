@@ -1,4 +1,5 @@
 export type SinglePreview = {
+  id: number;
   name: string;
   difficulty: string;
   tags: string[];

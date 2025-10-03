@@ -43,6 +43,7 @@ const MainView = () => {
           {
             res?.recipes.map((recipe: SinglePreview) => (
               <RecipeCard
+                id={recipe.id}
                 name={recipe.name}
                 difficulty={recipe.difficulty}
                 tags={recipe.tags}

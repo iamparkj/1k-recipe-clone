@@ -1,7 +1,7 @@
 import type { SinglePreview } from './types';
 
 const RecipeCard = (
-  { name, difficulty, tags, image }: SinglePreview
+  { id, name, difficulty, tags, image }: SinglePreview
 ) => {
   return (
     <div className="max-w-sm bg-white rounded-2xl">

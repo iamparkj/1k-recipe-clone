@@ -4,7 +4,7 @@ const RecipeCard = (props: SinglePreview) => {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-        <img className="aspect-video rounded-t-lg" src={props.image} alt="" />
+        <img className="aspect-video w-full rounded-t-lg object-cover" src={props.image} alt="" />
       </a>
       <div className="p-5">
         <a href="#">

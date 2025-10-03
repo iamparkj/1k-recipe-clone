@@ -25,6 +25,8 @@ export type SingleRecipe = {
 }
 
 export type MultipleRecipes = {
-  recipes: SingleRecipe[];
-  total: number
+  recipes: SinglePreview[];
+  total: number;
+  skip: number;
+  limit: number
 }

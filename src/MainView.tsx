@@ -63,7 +63,7 @@ const MainView = () => {
             [...Array(numPages)].map((_, i) => (
               <PageButton
                 content={String(i + 1)}
-                isSelected={i + 1 === numPages}
+                isSelected={i + 1 === page}
                 onClick={() => setPages(i + 1)}
               />
             ))

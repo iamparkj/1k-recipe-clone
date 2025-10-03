@@ -37,7 +37,7 @@ const MainView = () => {
   const numPages = totalCards === 0 ? 1 : Math.ceil(totalCards / CARDS_PER_PAGE);
 
   return (
-    <div className="py-20 justify-center-safe">
+    <div className="py-20 flex justify-center-safe">
       <div className="flex flex-col gap-6">
         <div className="grid md:grid-cols-3 gap-6">
           {

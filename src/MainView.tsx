@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
+import PageButton from "./pageButton";
 import type { MultipleRecipes, SinglePreview } from "./types";
 
 const CARDS_PER_PAGE = 12;
@@ -52,7 +53,27 @@ const MainView = () => {
             ))
           }
         </div>
-        {/* TODO: Add a pagination */}
+        <div className="flex gap-4 justify-center">
+          <PageButton
+            content="이전"
+            isSelected={false}
+            onClick={() => setPages(page === 1 ? 1 : page - 1)}
+          />
+          {
+            [...Array(numPages)].map((_, i) => (
+              <PageButton
+                content={String(i + 1)}
+                isSelected={i + 1 === numPages}
+                onClick={() => setPages(i + 1)}
+              />
+            ))
+          }
+          <PageButton
+            content="다음"
+            isSelected={false}
+            onClick={() => setPages(page === numPages ? numPages : page + 1)}
+          />
+        </div>
       </div>
     </div>
   );

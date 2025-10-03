@@ -22,7 +22,7 @@ export type SingleRecipe = {
   image: string;
   rating: number;
   reviewCount: number;
-  mealType: string[]
+  mealType: string
 }
 
 export type MultipleRecipes = {

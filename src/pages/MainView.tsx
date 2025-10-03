@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import PageButton from "../components/PageButton";
-import RecipeCard from "../components/RecipeCard";
-import type { MultipleRecipes, SinglePreview } from "../types";
+import { useEffect, useState } from 'react';
+import PageButton from '../components/PageButton';
+import RecipeCard from '../components/RecipeCard';
+import type { MultipleRecipes, SinglePreview } from '../types';
 
 const CARDS_PER_PAGE = 12;
 
@@ -17,13 +17,13 @@ async function getRecipes(
     const data = (await response.json()) as MultipleRecipes;
     return data;
   } else {
-    throw new Error("Fetch failure");
+    throw new Error('Fetch failure');
   }
 }
 
 const MainView = () => {
   const [page, setPages] = useState(1);
-  const [res, setRes] = useState<MultipleRecipes | null>(null)
+  const [res, setRes] = useState<MultipleRecipes | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,23 +35,22 @@ const MainView = () => {
   });
 
   const totalCards = res?.total ?? 0;
-  const numPages = totalCards === 0 ? 1 : Math.ceil(totalCards / CARDS_PER_PAGE);
+  const numPages =
+    totalCards === 0 ? 1 : Math.ceil(totalCards / CARDS_PER_PAGE);
 
   return (
     <div className="py-20 flex justify-center-safe">
       <div className="flex flex-col gap-6">
         <div className="grid md:grid-cols-3 gap-6">
-          {
-            res?.recipes.map((recipe: SinglePreview) => (
-              <RecipeCard
-                id={recipe.id}
-                name={recipe.name}
-                difficulty={recipe.difficulty}
-                tags={recipe.tags}
-                image={recipe.image}
-              />
-            ))
-          }
+          {res?.recipes.map((recipe: SinglePreview) => (
+            <RecipeCard
+              id={recipe.id}
+              name={recipe.name}
+              difficulty={recipe.difficulty}
+              tags={recipe.tags}
+              image={recipe.image}
+            />
+          ))}
         </div>
         <div className="flex gap-4 justify-center">
           <PageButton
@@ -59,15 +58,13 @@ const MainView = () => {
             isSelected={false}
             onClick={() => setPages(page === 1 ? 1 : page - 1)}
           />
-          {
-            [...Array(numPages)].map((_, i) => (
-              <PageButton
-                content={String(i + 1)}
-                isSelected={i + 1 === page}
-                onClick={() => setPages(i + 1)}
-              />
-            ))
-          }
+          {[...Array(numPages)].map((_, i) => (
+            <PageButton
+              content={String(i + 1)}
+              isSelected={i + 1 === page}
+              onClick={() => setPages(i + 1)}
+            />
+          ))}
           <PageButton
             content="다음"
             isSelected={false}
@@ -77,6 +74,6 @@ const MainView = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MainView;

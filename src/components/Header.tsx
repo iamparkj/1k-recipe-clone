@@ -7,7 +7,7 @@ const Header = () => {
         <h1>천개의 레시피</h1>
       </Link>
     </nav>
-  )
-}
+  );
+};
 
 export default Header;

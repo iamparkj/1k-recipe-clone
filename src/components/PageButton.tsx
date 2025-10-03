@@ -1,17 +1,12 @@
 type PageButtonProp = {
   content: string;
   isSelected: boolean;
-  onClick: () => void
-}
+  onClick: () => void;
+};
 
-const PageButton = (
-  { content, isSelected, onClick }: PageButtonProp
-) => {
+const PageButton = ({ content, isSelected, onClick }: PageButtonProp) => {
   return isSelected ? (
-    <button
-      className="bg-white rounded-md px-2 py-1 text-sm"
-      onClick={onClick}
-    >
+    <button className="bg-white rounded-md px-2 py-1 text-sm" onClick={onClick}>
       {content}
     </button>
   ) : (
@@ -22,6 +17,6 @@ const PageButton = (
       {content}
     </button>
   );
-}
+};
 
 export default PageButton;

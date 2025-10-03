@@ -4,7 +4,7 @@ export type SinglePreview = {
   difficulty: string;
   tags: string[];
   image: string;
-}
+};
 
 export type SingleRecipe = {
   id: number;
@@ -22,12 +22,12 @@ export type SingleRecipe = {
   image: string;
   rating: number;
   reviewCount: number;
-  mealType: string
-}
+  mealType: string;
+};
 
 export type MultipleRecipes = {
   recipes: SinglePreview[];
   total: number;
   skip: number;
-  limit: number
-}
+  limit: number;
+};

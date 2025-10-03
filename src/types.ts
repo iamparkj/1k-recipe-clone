@@ -11,7 +11,7 @@ export type SingleRecipe = {
   name: string;
   ingredients: string[];
   instructions: string[];
-  prepTimeMinutes: string[];
+  prepTimeMinutes: number;
   cookTimeMinutes: number;
   servings: number;
   difficulty: string;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Header from './Header';
 import RecipeCard from './RecipeCard';
 import type { MultipleRecipes, SinglePreview } from './types';
 
@@ -26,7 +27,8 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="app">
+      <Header />
       <RecipeCard {...props} />
     </div>
   );

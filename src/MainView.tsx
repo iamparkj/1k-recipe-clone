@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import PageButton from "./PageButton";
 import RecipeCard from "./RecipeCard";
-import PageButton from "./pageButton";
 import type { MultipleRecipes, SinglePreview } from "./types";
 
 const CARDS_PER_PAGE = 12;

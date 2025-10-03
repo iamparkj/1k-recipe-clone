@@ -16,11 +16,11 @@ const RecipeCard = (
           {difficulty}
         </span>
       </div>
-      <div className="px-4 pb-4 flex place-content-start gap-2">
+      <div className="px-4 pb-4 flex place-content-start gap-2 overflow-hidden">
         {
           tags.map((tag: string) => (
             <div className="rounded-sm border border-[#efeff0]">
-              <p className="mx-2 my-0.5 text-xs text-[#5c625e]">
+              <p className="mx-2 my-0.5 text-xs text-[#5c625e] truncate">
                 {tag}
               </p>
             </div>

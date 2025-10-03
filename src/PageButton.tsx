@@ -11,7 +11,7 @@ const PageButton = (
 
   return (
     <button
-      className={`bg-white rounded-md p-2 text-sm text=[${textColour}]`}
+      className={`bg-white rounded-md px-2 py-1 text-sm text=[${textColour}]`}
       onClick={onClick}
     >
       {content}
